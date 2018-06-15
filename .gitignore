@@ -109,3 +109,6 @@ venv.bak/
 *.ipynb
 messages/
 messages_test/
+
+# macOS filesystem
+.DS_store
