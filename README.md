@@ -8,7 +8,7 @@ A python script to extract FB messenger data from the JSON format provided by FB
 4. Navigate to the repo with the terminal `$cd repo_name`
 5. Install required packages using pip for your python 3 distribution `$pip3 install -r requirements.txt`
 6. Run the script `$python3 messenger_analysis.py` 
-7. The script will scroll through you messages and create 3 CSV in a new directory called `csv_output` in the repo 
+7. The script will scroll through you messages and create three CSVs in a new directory called `csv_output` in the repo 
 
 ## Data Structure
 The script create 3 tables from your FB messages: 
@@ -18,4 +18,4 @@ The script create 3 tables from your FB messages:
 The key to link this tables together is `thread_path`
 
 ## Analysis
-I am building a jupyter notebook template for you to be able to graph you messenger data. I will push the notebook in this repo .It is a WIP, stay tuned.
+I am building a jupyter notebook template for you to be able to graph you messenger data. I will push the notebook in this repo. It is a WIP, stay tuned.
