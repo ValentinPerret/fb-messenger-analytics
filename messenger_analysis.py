@@ -47,10 +47,16 @@ def data_extraction(path):
 
 	# Clean data format
 	message_df = message_format_cleaning(message_df)
+
+	# Create sub directory if does not exist
+	output_path += '/csv_output'
+	if not os.path.exists(output_path):
+		os.makedirs(output_path)
+
 	# Output CSV files
-	message_csv_name = '{}/csv_output/message_extract.csv'.format(output_path)
-	meta_csv_name = '{}/csv_output/meta_extract.csv'.format(output_path)
-	part_csv_name = '{}/csv_output/part_extract.csv'.format(output_path)
+	message_csv_name = '{}/message_extract.csv'.format(output_path)
+	meta_csv_name = '{}/meta_extract.csv'.format(output_path)
+	part_csv_name = '{}/part_extract.csv'.format(output_path)
 	# for encoding in ('utf-8', 'latin1'):
 	for encoding in (['latin1']):
 		message_df.to_csv(message_csv_name.format(encoding), encoding = encoding)
@@ -81,3 +87,5 @@ def message_format_cleaning(df):
 if __name__ == "__main__":
 	path = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) + '/messages'
 	data_extraction(path)
+
+
