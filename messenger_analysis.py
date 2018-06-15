@@ -4,15 +4,12 @@ import inspect, os
 import fnmatch
 import codecs
 
-# https://taufiqhabib.wordpress.com/2016/12/18/intalling-jupyter-in-a-virtualenv/
-# https://anbasile.github.io/programming/2017/06/25/jupyter-venv/
-
 def data_extraction(path):
 	'''
 	Input: path to the JSON data folder downloaded from FB
 	Output: csv for the message table, the meta table and the participants table 
 	'''
-	output_path = os.path.dirname(os.path.abspath(__file__))
+	output_path = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 
 	message_df = pd.DataFrame()
 	meta_df = pd.DataFrame()
