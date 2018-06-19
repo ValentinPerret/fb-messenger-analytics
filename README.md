@@ -4,7 +4,7 @@ A python script to extract FB messenger data from the JSON format provided by FB
 ## How to use the script
 1. Download your FB messenger data in the `JSON` format in your privacy settings ([link](https://www.facebook.com/help/1701730696756992?helpref=hc_global_nav) to FB FAQ for details) 
 ```diff
-Don't forget to change the default format from HTML to JSON when you download your data
+- Don't forget to change the default format from HTML to JSON when you download your data
 ```
 2. Clone the repo in your computer
 3. When you have the file from FB, copy the `messages` folder provided by FB in the repo
