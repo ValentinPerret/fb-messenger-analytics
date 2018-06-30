@@ -26,14 +26,14 @@ def data_extraction(path):
 				message_df_temp = pd.DataFrame(data['messages'])
 				message_df_temp['thread_path'] = data['thread_path']
 				message_df = pd.concat([message_df, message_df_temp], ignore_index = True)
-				print('{} message data extracted'.format(data['thread_path']))
+				print '{} message data extracted'.format(data['thread_path'])
 
 				# Extract participants from dict
 				try:
 					part_df_temp = pd.DataFrame(data['participants'])
 					part_df_temp['thread_path'] = data['thread_path']
 					part_df = pd.concat([part_df, part_df_temp], ignore_index = True)
-					print('{} participants data extracted'.format(data['thread_path']))
+					print '{} participants data extracted'.format(data['thread_path'])
 				except:
 					continue
 
@@ -42,7 +42,7 @@ def data_extraction(path):
 				data.pop('participants')
 				meta_df_temp = pd.DataFrame(data, index = [0])
 				meta_df = pd.concat([meta_df, meta_df_temp], ignore_index = True)
-				print('{} metadata data extracted'.format(data['thread_path']))
+				print '{} metadata data extracted'.format(data['thread_path'])
 
 
 	# Clean data format
